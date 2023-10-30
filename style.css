@@ -1,0 +1,248 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: black;
+    text-align: center;
+}
+
+.container {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #333;
+    border-radius: 5px;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
+    transition: box-shadow .7s;
+}
+.container:hover{
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.7);
+}
+h1 {
+    color: #fff;
+}
+
+.toggle-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #2196F3;
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+.todo-container {
+    display: flex;
+    margin-top: 20px;
+    justify-content: space-around;
+}
+
+#todo-input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 55%;
+}
+
+.button {
+    position: relative;
+    width: 110px;
+    height: 40px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    border: 1px solid #34974d;
+    background-color: #3aa856;
+  }
+  
+  .button, .button__icon, .button__text {
+    transition: all 0.3s;
+  }
+  
+  .button .button__text {
+    transform: translateX(10px);
+    color: #fff;
+    font-weight: 600;
+  }
+  
+  .button .button__icon {
+    position: absolute;
+    transform: translateX(80px);
+    height: 103%;
+    width: 39px;
+    background-color: #34974d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .button .svg {
+    width: 30px;
+    stroke: #fff;
+  }
+  
+  .button:hover {
+    background: #34974d;
+  }
+  
+  .button:hover .button__text {
+    color: transparent;
+  }
+  
+  .button:hover .button__icon {
+    width: 110px;
+    transform: translateX(0);
+  }
+  
+  .button:active .button__icon {
+    background-color: #2e8644;
+  }
+  
+  .button:active {
+    border: 1px solid #2e8644;
+  }
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+#todo-list{
+    margin-top: 20px;
+    color: #fff;
+}
+li {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+}
+
+li:last-child {
+    border-bottom: none;
+}
+
+.delete-button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgb(20, 20, 20);
+    border: none;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.164);
+    cursor: pointer;
+    transition-duration: 0.3s;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .delete-svgIcon {
+    width: 15px;
+    transition-duration: 0.3s;
+  }
+  
+  .delete-svgIcon path {
+    fill: white;
+  }
+  
+  .delete-button:hover {
+    width: 90px;
+    border-radius: 50px;
+    transition-duration: 0.3s;
+    background-color: rgb(255, 69, 69);
+    align-items: center;
+  }
+  
+  .delete-button:hover .delete-svgIcon {
+    width: 20px;
+    transition-duration: 0.3s;
+    transform: translateY(60%);
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+  
+  .delete-button::before {
+    display: none;
+    content: "Delete";
+    color: white;
+    transition-duration: 0.3s;
+    font-size: 2px;
+  }
+  
+  .delete-button:hover::before {
+    display: block;
+    padding-right: 10px;
+    font-size: 13px;
+    opacity: 1;
+    transform: translateY(0px);
+    transition-duration: 0.3s;
+  }
+
+.dark-mode{
+    background-color: #333;
+    color: #ffffff;
+}
+.dark-mode h1{
+    color: #ffffff;
+}
+.dark-mode .container{
+    background-color: red !important;
+}
+
+#todo-list span{
+    word-wrap:break-word;
+    width: 70%;
+}

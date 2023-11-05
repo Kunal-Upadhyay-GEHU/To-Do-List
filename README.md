@@ -34,10 +34,6 @@ You can access the live demo of this To-Do List application by clicking the foll
 
 6. Enjoy a dark mode by clicking the toggle button.
 
-## Screenshots
-
-![To-Do List Screenshot](screenshot.png)
-
 ## Author
 
 - Kunal Upadhyay
